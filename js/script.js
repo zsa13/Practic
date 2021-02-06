@@ -54,8 +54,9 @@ function detectPersonalLevel() {
 }
 // detectPersonalLevel();
 
+// Если значение personalMovieDB.privet false, тогда вывести главный объект
 function showMyDB(hidden) {
-	if (!hidden) {
+	if (!hidden) {							//Используется оператор отрицания к аргументу
 		console.log(personalMovieDB);
 	}
 }
@@ -64,6 +65,7 @@ showMyDB(personalMovieDB.privet);
 function writeYourGenres() {
 	for (let i = 1; i <=3; i++) {
 		personalMovieDB.genres[i-1] = prompt(`Ваш любимы жанр под номером ${i}?`);
+		
 	}
 }
 writeYourGenres();
